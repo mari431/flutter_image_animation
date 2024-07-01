@@ -1,0 +1,27 @@
+[
+{
+"id": "1",
+"assetImage": "assets/img/vice/vice1.png",
+"description": "This is the first magazine description."
+},
+{
+"id": "2",
+"assetImage": "assets/img/vice/vice2.png",
+"description": "This is the second magazine description."
+},
+{
+"id": "3",
+"assetImage": "assets/img/vice/vice3.png",
+"description": "This is the third magazine description."
+},
+{
+"id": "4",
+"assetImage": "assets/img/vice/vice4.png",
+"description": "This is the fourth magazine description."
+},
+{
+"id": "5",
+"assetImage": "assets/img/vice/vice5.png",
+"description": "This is the fifth magazine description."
+}
+]
