@@ -1,5 +1,3 @@
-import 'dart:convert';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,11 +6,6 @@ import 'package:flutter_image_animation/screen/widget/MagazineCoverImage.dart';
 import 'package:flutter_image_animation/screen/widget/MagazinesDetailsScreen.dart';
 
 import '../model/mimage.dart';
-
-// import '../../../../core/core.dart';
-// import '../../../magazines_details/presentation/screens/magazines_details_screen.dart';
-// import '../widgets/all_editions_list_view.dart';
-// import '../widgets/infinite_dragable_slider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -29,13 +22,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
-  final List<MImage> magazines = MImage.fakeMImagesValues;
+  final List<MImage> mimagess = MImage.fakeMImagesValues;
   late int currentIndex;
 
   @override
   void initState() {
     currentIndex = widget.initialIndex;
-
     super.initState();
   }
 
@@ -48,8 +40,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     setState(() => currentIndex = index);
     MagazinesDetailsScreen.push(
       context,
-      magazines: magazines,
-      // magazines:futureMagazines,
+      mimagess: mimagess,
       index: currentIndex,
     );
   }
@@ -86,7 +77,6 @@ class _AppBar extends StatelessWidget implements PreferredSize {
       // clipBehavior: Clip.none,
       title: Text('Image Animation'),
       actions: [
-        // const MenuButton(),
       ],
     );
   }

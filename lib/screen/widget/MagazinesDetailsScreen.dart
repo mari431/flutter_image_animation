@@ -16,7 +16,7 @@ class MagazinesDetailsScreen extends StatefulWidget {
   static void push(
       BuildContext context, {
         required int index,
-        required List<MImage> magazines,
+        required List<MImage> mimagess,
       }) =>
       Navigator.push<int>(
         context,
@@ -25,7 +25,7 @@ class MagazinesDetailsScreen extends StatefulWidget {
             opacity: animation,
             child: MagazinesDetailsScreen(
               index: index,
-              mimagess: magazines,
+              mimagess: mimagess,
             ),
           ),
         ),
