@@ -2,11 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-
 import 'dragable_widget.dart';
-
-// We made it :)
-// On next we are gonna learn, How to make this 3D slide
 
 class InfiniteDragableSlider extends StatefulWidget {
   const InfiniteDragableSlider({

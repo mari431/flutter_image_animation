@@ -1,5 +1,5 @@
-class Magazine {
-  const Magazine({
+class MImage {
+  const MImage({
     required this.id,
     required this.assetImage,
     required this.description,
@@ -8,9 +8,9 @@ class Magazine {
   final String id;
   final String assetImage;
   final String description;
-  static final List<Magazine> fakeMagazinesValues = List.generate(
+  static final List<MImage> fakeMImagesValues = List.generate(
     5,
-        (index) => Magazine(
+        (index) => MImage(
       id: '$index',
       assetImage: 'assets/img/mimg${index + 1}.jpg',
       description:

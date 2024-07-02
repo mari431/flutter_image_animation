@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../model/magazine.dart';
+import '../../model/mimage.dart';
 
-class MagazineCoverImage extends StatelessWidget {
-  const MagazineCoverImage({
-    required this.magazine,
+class MimageCoverImage extends StatelessWidget {
+  const MimageCoverImage({
+    required this.mimage,
     super.key,
     this.height,
   });
 
-  final Magazine magazine;
+  final MImage mimage;
   final double? height;
 
   @override
@@ -21,7 +21,7 @@ class MagazineCoverImage extends StatelessWidget {
         child: DecoratedBox(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(magazine.assetImage),
+              image: AssetImage(mimage.assetImage),
               fit: BoxFit.cover,
             ),
             boxShadow: const [

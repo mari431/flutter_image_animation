@@ -7,7 +7,7 @@ import 'package:flutter_image_animation/screen/widget/InfiniteDragableSlider.dar
 import 'package:flutter_image_animation/screen/widget/MagazineCoverImage.dart';
 import 'package:flutter_image_animation/screen/widget/MagazinesDetailsScreen.dart';
 
-import '../model/magazine.dart';
+import '../model/mimage.dart';
 
 // import '../../../../core/core.dart';
 // import '../../../magazines_details/presentation/screens/magazines_details_screen.dart';
@@ -29,31 +29,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
-  final List<Magazine> magazines = Magazine.fakeMagazinesValues;
-  // late Future<List<Magazine>> futureMagazines;
+  final List<MImage> magazines = MImage.fakeMImagesValues;
   late int currentIndex;
 
   @override
   void initState() {
-    // futureMagazines=loadMagazinesFromFile();
     currentIndex = widget.initialIndex;
 
     super.initState();
   }
-
-
-
-  // Future<List<Magazine>> loadMagazinesFromFile() async {
-  //   // Load JSON string from assets
-  //   String jsonString = await rootBundle.loadString('assets/magazines.json');
-  //
-  //   // Decode the JSON string into a list of maps
-  //   List<dynamic> jsonResponse = json.decode(jsonString);
-  //
-  //   // Convert the list of maps into a list of Magazine objects
-  //   return jsonResponse.map((json) => Magazine.fromJson(json)).toList();
-  // }
-
 
   @override
   void dispose() {
@@ -83,9 +67,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               width: 200,
               height: 400,
               child: InfiniteDragableSlider(
-                iteamCount: Magazine.fakeMagazinesValues.length,
-                itemBuilder: (context, index) => MagazineCoverImage(
-                    magazine: Magazine.fakeMagazinesValues[index]),
+                iteamCount: MImage.fakeMImagesValues.length,
+                itemBuilder: (context, index) => MimageCoverImage(
+                    mimage: MImage.fakeMImagesValues[index]),
               ),
             ),
           ),
